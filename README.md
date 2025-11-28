@@ -1,3 +1,12 @@
+# Oxide deployment information
+
+This repository contains the changes we made to justtrustme for an internal
+Oxide deployment. Releases in this repo only correspond to versions we deployed
+ourselves, not upstream releases of justtrustme.
+
+Oxide employees wishing to update the deployed version should push their changes
+here, push a tag, and update the pinned version in the corp-services repo.
+
 # justtrustme
 
 justtrust me is a demo/testing OIDC token issuer. It will accept any claims as
