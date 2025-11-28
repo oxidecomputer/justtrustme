@@ -73,7 +73,12 @@ type TokenResponse struct {
 }
 
 func issuer(r *http.Request) string {
-	return fmt.Sprintf("https://%s", r.Host)
+	prefix := os.Getenv("JTM_PATH_PREFIX")
+	if prefix != "" {
+		return fmt.Sprintf("https://%s/%s", r.Host, prefix)
+	} else {
+		return fmt.Sprintf("https://%s", r.Host)
+	}
 }
 
 func main() {
